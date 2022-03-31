@@ -3,8 +3,8 @@
     if (request.getMethod().equalsIgnoreCase("post")) {
         String name = request.getParameter("name");
         String password = request.getParameter("password");
-        if (name.equals("admin") && password.equals("password")) {
-            response.sendRedirect("/profile.jsp");
+        if (name.equalsIgnoreCase("admin") && password.equalsIgnoreCase("password")) {
+            response.sendRedirect("/profile");
         }
     }
 %>
